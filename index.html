@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og:https://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="none">
+    <title>予約サイト｜MOMO TRAVEL</title>
+    <meta name = "keywords" content="旅行,宿泊,ホテル,旅館,予約">
+    <meta name ="description" content="MOMO TRAVELのホテル・旅館予約サイト。国内・海外の宿泊施設や宿泊プランがオンラインで検索・予約できます。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@momo_travel">
+    <link rel="canonical" href="#">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="html5reset-1.6.1.css">
+    <link rel="stylesheet" href="style.css">
+    <!--OGP-->
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ホテル・旅館予約サイト">
+    <meta property="og:description" content="MOMO TRAVELのホテル・旅館予約サイト。国内・海外の宿泊施設や宿泊プランがオンラインで検索・予約できます。">
+    <meta property="og:site_name" content="予約サイト｜MOMO TRAVEL" />
+    <meta property="og:image" content="">
+    <meta property="fb:app_id" content="">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_top">
+        <h1>
+          <img src="momotravel_logo2.png" alt="MOMO TRAVEL" class="logo">
+        </h1>
+        <nav class="header_nav">
+          <ul class="header_nav_left">
+            <li>
+              <a href="#" class="header_nav_left_item">会員登録・ログイン</a>
+            </li>
+            <li>
+              <a href="#" class="header_nav_left_item">予約確認・キャンセル</a>
+            </li>
+          </ul>
+          <div class="header_nav_right">
+            <ul class="header_nav_right_list">
+              <li class="header_nav_right_item"><a href="#">初めての方へ</a></li>
+              <li class="header_nav_right_item"><a href="#">ヘルプ</a></li>
+              <li class="header_nav_right_item"><a href="#">よくあるご質問</a></li>
+            </ul>
+            <div class="header_nav_right_lower">
+              <form action="#" method="POST" class="header_nav_search">
+                <input class="nav_search_box" type="text" placeholder="キーワードを入力">
+                <button class="nav_search_btn" type="submit" value="検索">検索</button>
+              </form>
+              <select onchange="location.href=value" class="header_nav_language" name="language">
+                <option class="nav_language_item" value="" hidden>language</option>
+                <option class="nav_language_item" value="#">English</option>
+                <option class="nav_language_item" value="#">日本語</option>
+                <option class="nav_language_item" value="#">한국어</option>
+              </select>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="gnav">
+        <div class="gnav_left">
+          <h1 class="gnav_ttl">国内</h1>
+          <ul class="gnav_national_list">
+            <li class="gnav_wrap national_item">
+              <a href="#" class="gnav_item">
+                <img src="national1.png" alt="国内ホテル" class="gnav_icon">
+                <p class="gnav_icon_ttl">国内ホテル</p>
+              </a>
+            </li>
+            <li class="gnav_wrap national_item">
+              <a href="#" class="gnav_item">
+                <img src="national2.png" alt="国内航空券" class="gnav_icon">
+                <p class="gnav_icon_ttl">国内航空券</p>
+              </a>
+            </li>
+            <li class="gnav_wrap national_item">
+              <a href="#" class="gnav_item">
+                <img src="national3.png" alt="国内ツアー" class="gnav_icon">
+                <p class="gnav_icon_ttl">国内ツアー</p>
+              </a>
+            </li>
+            <li class="gnav_wrap national_item">
+              <a href="#" class="gnav_item">
+                <img src="national4.png" alt="レジャー・体験" class="gnav_icon">
+                <p class="gnav_icon_ttl">レジャー・体験</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="gnav_right">
+          <h1 class="gnav_ttl">海外</h1>
+          <ul class="gnav_international_list">
+            <li class="gnav_wrap international_item">
+              <a href="#" class="gnav_item">
+                <img src="international1.png" alt="海外ホテル" class="gnav_icon">
+                <p class="gnav_icon_ttl">海外ホテル</p>
+              </a>
+            </li>
+            <li class="gnav_wrap international_item">
+              <a href="#" class="gnav_item">
+                <img src="international2.png" alt="海外航空券" class="gnav_icon">
+                <p class="gnav_icon_ttl">海外航空券</p>
+              </a>
+            </li>
+            <li class="gnav_wrap international_item">
+              <a href="#" class="gnav_item">
+                <img src="international3.png" alt="海外ツアー" class="gnav_icon">
+                <p class="gnav_icon_ttl">海外ツアー</p>
+              </a>
+            </li>
+            <li class="gnav_wrap international_item">
+              <a href="#" class="gnav_item">
+                <img src="international4.png" alt="オプション" class="gnav_icon">
+                <p class="gnav_icon_ttl">オプション</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!--top_kv-->
+      <div class="top_kv">
+        <div class="tabs">
+          <form action="#" method="POST">
+            <input id="all" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="all">全部</label>
+            <input id="date" type="radio" name="tab_item">
+            <label class="tab_item" for="date">日付から探す</label>
+            <input id="money" type="radio" name="tab_item">
+            <label class="tab_item" for="money">金額から探す</label>
+            <div class="tab_content" id="all_content">
+              <div class="tab_content_description">
+                <h1 class="search_ttl">国内ホテル・旅館検索</h1>
+                <div class="top_search">
+                  <div class="top_search_list">
+                    <span class="top_search_item">目的地</span>
+                    <select name="pref" id="pref" onchange="prefList(this.value)">
+                      <option disabled selected>都道府県を選択してください </option>
+                      <option value="北海道">北海道</option>
+                      <option value="青森県">青森県</option>
+                      <option value="岩手県">岩手県</option>
+                      <option value="宮城県">宮城県</option>
+                      <option value="秋田県">秋田県</option>
+                      <option value="山形県">山形県</option>
+                      <option value="福島県">福島県</option>
+                      <option value="茨城県">茨城県</option>
+                      <option value="栃木県">栃木県</option>
+                      <option value="群馬県">群馬県</option>
+                      <option value="埼玉県">埼玉県</option>
+                      <option value="千葉県">千葉県</option>
+                      <option value="東京都">東京都</option>
+                      <option value="神奈川県">神奈川県</option>
+                      <option value="新潟県">新潟県</option>
+                      <option value="山梨県">山梨県</option>
+                      <option value="長野県">長野県</option>
+                      <option value="富山県">富山県</option>
+                      <option value="石川県">石川県</option>
+                      <option value="福井県">福井県</option>
+                      <option value="岐阜県">岐阜県</option>
+                      <option value="静岡県">静岡県</option>
+                      <option value="愛知県">愛知県</option>
+                      <option value="三重県">三重県</option>
+                      <option value="滋賀県">滋賀県</option>
+                      <option value="京都府">京都府</option>
+                      <option value="大阪府">大阪府</option>
+                      <option value="兵庫県">兵庫県</option>
+                      <option value="奈良県">奈良県</option>
+                      <option value="和歌山県">和歌山県</option>
+                      <option value="鳥取県">鳥取県</option>
+                      <option value="島根県">島根県</option>
+                      <option value="岡山県">岡山県</option>
+                      <option value="広島県">広島県</option>
+                      <option value="山口県">山口県</option>
+                      <option value="徳島県">徳島県</option>
+                      <option value="香川県">香川県</option>
+                      <option value="愛媛県">愛媛県</option>
+                      <option value="高知県">高知県</option>
+                      <option value="福岡県">福岡県</option>
+                      <option value="佐賀県">佐賀県</option>
+                      <option value="長崎県">長崎県</option>
+                      <option value="熊本県">熊本県</option>
+                      <option value="大分県">大分県</option>
+                      <option value="宮崎県">宮崎県</option>
+                      <option value="鹿児島県">鹿児島県</option>
+                      <option value="沖縄県">沖縄県</option>
+                    </select>
+                    <select name="area" id="area" disabled>
+                      <option disabled selected>エリアを選択してください　</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">日付</span>
+                    <label for="checkindate1">チェックイン</label>
+                    <input type="date" id="checkindate1" name="trip_checkindate"
+                      value="2021-03-01"
+                      min="2021-02-01" max="2021-12-31"
+                    >
+                    <label for="checkoutdate2">　チェックアウト</label>
+                    <input type="date" id="checkoutdate2" name="trip_checkoutdate"
+                      value="2021-03-02"
+                      min="2021-02-01" max="2021-12-31"
+                    >
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">部屋数</span>
+                    <select name="room">
+                      <option value="1室" selected>1室　</option>
+                      <option value="2室">2室</option>
+                      <option value="3室">3室</option>
+                      <option value="4室">4室</option>
+                      <option value="5室">5室</option>
+                      <option value="6室">6室</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">人数</span>
+                    <p>大人</p>
+                    <select name="adult">
+                      <option value="1人">1人</option>
+                      <option value="2人" selected>2人　</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                      <option value="7人">7人</option>
+                      <option value="8人">8人</option>
+                      <option value="9人〜">9人〜</option>
+                    </select>
+                    <p>　小学生</p>
+                    <select name="estudent">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                    <p>　幼児</p>
+                    <select name="child">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">予算</span>
+                    <select name="money">
+                      <option value="上限なし" selected>上限なし　</option>
+                      <option value="5000円">5000円</option>
+                      <option value="10000円">10000円</option>
+                      <option value="15000円">15000円</option>
+                      <option value="20000円">20000円</option>
+                      <option value="30000円">30000円</option>
+                      <option value="40000円">40000円</option>
+                      <option value="50000円">50000円</option>
+                      <option value="100000円">100000円</option>
+                      <option value="150000円">150000円</option>
+                      <option value="200000円">200000円</option>
+                    </select>
+                    〜
+                    <select name="money">
+                      <option value="下限なし" selected>下限なし　</option>
+                      <option value="5000円">5000円</option>
+                      <option value="10000円">10000円</option>
+                      <option value="15000円">15000円</option>
+                      <option value="20000円">20000円</option>
+                      <option value="30000円">30000円</option>
+                      <option value="40000円">40000円</option>
+                      <option value="50000円">50000円</option>
+                      <option value="100000円">100000円</option>
+                      <option value="150000円">150000円</option>
+                      <option value="200000円">200000円</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">キーワード</span>
+                    <input class="" type="text" placeholder="　例：駅名・ホテル名">
+                  </div>
+                </div>
+                <div class="top_search_mbtn">
+                  <button class="mbtn">検索</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" id="date_content">
+              <div class="tab_content_description">
+                <h1 class="search_ttl">国内ホテル・旅館検索</h1>
+                <div class="top_search">
+                  <div class="top_search_list">
+                    <span class="top_search_item">日付</span>
+                    <label for="checkindate">チェックイン</label>
+                    <input type="date" id="checkindate" name="trip_checkindate"
+                      value="2021-03-01"
+                      min="2021-02-01" max="2021-12-31"
+                    >
+                    <label for="checkoutdate">　チェックアウト</label>
+                    <input type="date" id="checkoutdate" name="trip_checkoutdate"
+                      value="2021-03-02"
+                      min="2021-02-01" max="2021-12-31"
+                    >
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">部屋数</span>
+                    <select name="room">
+                      <option value="1室" selected>1室　</option>
+                      <option value="2室">2室</option>
+                      <option value="3室">3室</option>
+                      <option value="4室">4室</option>
+                      <option value="5室">5室</option>
+                      <option value="6室">6室</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">人数</span>
+                    <p>大人</p>
+                    <select name="adult">
+                      <option value="1人">1人</option>
+                      <option value="2人" selected>2人　</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                      <option value="7人">7人</option>
+                      <option value="8人">8人</option>
+                      <option value="9人〜">9人〜</option>
+                    </select>
+                    <p>　小学生</p>
+                    <select name="estudent">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                    <p>　幼児</p>
+                    <select name="child">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="top_search_mbtn">
+                  <button class="mbtn">検索</button>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" id="money_content">
+              <div class="tab_content_description">
+                <h1 class="search_ttl">国内ホテル・旅館検索</h1>
+                <div class="top_search">
+                  <div class="top_search_list">
+                    <span class="top_search_item">予算</span>
+                    <select name="money">
+                      <option value="上限なし" selected>上限なし　</option>
+                      <option value="5000円">5000円</option>
+                      <option value="10000円">10000円</option>
+                      <option value="15000円">15000円</option>
+                      <option value="20000円">20000円</option>
+                      <option value="30000円">30000円</option>
+                      <option value="40000円">40000円</option>
+                      <option value="50000円">50000円</option>
+                      <option value="100000円">100000円</option>
+                      <option value="150000円">150000円</option>
+                      <option value="200000円">200000円</option>
+                    </select>
+                    〜
+                    <select name="money">
+                      <option value="下限なし" selected>下限なし　</option>
+                      <option value="5000円">5000円</option>
+                      <option value="10000円">10000円</option>
+                      <option value="15000円">15000円</option>
+                      <option value="20000円">20000円</option>
+                      <option value="30000円">30000円</option>
+                      <option value="40000円">40000円</option>
+                      <option value="50000円">50000円</option>
+                      <option value="100000円">100000円</option>
+                      <option value="150000円">150000円</option>
+                      <option value="200000円">200000円</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">部屋数</span>
+                    <select name="room">
+                      <option value="1室" selected>1室　</option>
+                      <option value="2室">2室</option>
+                      <option value="3室">3室</option>
+                      <option value="4室">4室</option>
+                      <option value="5室">5室</option>
+                      <option value="6室">6室</option>
+                    </select>
+                  </div>
+                  <div class="top_search_list">
+                    <span class="top_search_item">人数</span>
+                    <p>大人</p>
+                    <select name="adult">
+                      <option value="1人">1人</option>
+                      <option value="2人" selected>2人　</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                      <option value="7人">7人</option>
+                      <option value="8人">8人</option>
+                      <option value="9人〜">9人〜</option>
+                    </select>
+                    <p>　小学生</p>
+                    <select name="estudent">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                    <p>　幼児</p>
+                    <select name="child">
+                      <option value="0人" selected>0人　</option>
+                      <option value="1人">1人</option>
+                      <option value="2人">2人</option>
+                      <option value="3人">3人</option>
+                      <option value="4人">4人</option>
+                      <option value="5人">5人</option>
+                      <option value="6人">6人</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="top_search_mbtn">
+                  <button class="mbtn">検索</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- recommend_campaign -->
+      <section class="recommend_campaign">
+        <div class="u_wrap">
+          <h2 class="m_ttl">おすすめ・キャンペーン</h2>
+          <div class="section_list">
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_hotel.jpg" alt="2021年1月オープン宿泊施設！" class="section_item_img">
+                <h3 class="mm_ttl">2021年1月オープン宿泊施設！</h3>
+              </a>
+            </section>
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_family.jpg" alt="ホテル＋USJ入場チケットで10000円！" class="section_item_img">
+                <h3 class="mm_ttl">ホテル＋USJ入場チケットで10000円！</h3>
+              </a>
+            </section>
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_child.jpg" alt="GW早期予約がお得！" class="section_item_img">
+                <h3 class="mm_ttl">GW早期予約がお得！</h3>
+              </a>
+            </section>
+          </div>
+          <div class="section_mbtn">
+            <a href="#" class="mbtn">もっと見る</a>
+          </div>
+        </div>
+      </section>
+      <!--ranking-->
+      <section class="ranking">
+        <div class="u_wrap">
+          <h2 class="m_ttl">人気ランキング</h2>
+          <div class="section_list">
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_kusatsu_onsen.jpg" alt="１位：群馬県　草津温泉" class="section_item_img">
+                <h3 class="mm_ttl">１位：群馬県　草津温泉<br>露天風呂付き個室でゆっくりと。</h3>
+              </a>
+            </section>
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_dinner.jpg" alt="２位：千葉県　ザ・マンハッタン" class="section_item_img">
+                <h3 class="mm_ttl">２位：千葉県　ザ・マンハッタン<br>駐車場無料などの特典付き！</h3>
+              </a>
+            </section>
+            <section class="section_item">
+              <a href="#">
+                <img src="photo_disney.jpg" alt="３位：千葉県　ヒルトン東京ベイ" class="section_item_img">
+                <h3 class="mm_ttl">３位：千葉県　ヒルトン東京ベイ<br>パークチケット付プラン販売中！</h3>
+              </a>
+            </section>
+          </div>
+          <div class="section_mbtn">
+            <a href="#" class="mbtn">もっと見る</a>
+          </div>
+        </div>
+      </section>
+      <!--news-->
+      <section class="news">
+        <div class="u_wrap">
+          <div class="news_head">
+            <h2 class="m_ttl">最新情報</h2>
+            <a href="#" class="mbtn_primary">一覧を見る</a>
+          </div>
+          <ul class="news_list">
+            <li class="news_item">
+              <div class="news_item_date_tag">
+                <span class="news_item_date">2021/01/08</span>
+                <span class="news_item_tag news_item_tag01">お知らせ</span>
+              </div>
+              <a href="#" class="news_content">緊急事態宣言に伴うGoToトラベル事業の取扱いについて</a>
+            </li>
+            <li class="news_item">
+              <div class="news_item_date_tag">
+                <span class="news_item_date">2021/01/01</span>
+                <span class="news_item_tag news_item_tag02">キャンペーン</span>
+              </div>
+              <a href="#" class="news_content">新年のご挨拶・初売りキャンペーン</a>
+            </li>
+            <li class="news_item">
+              <div class="news_item_date_tag">
+                <span class="news_item_date">2020/12/20</span>
+                <span class="news_item_tag news_item_tag01">お知らせ</span>
+              </div>
+              <a href="#" class="news_content">年末年始の営業について</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer_upper">
+        <div class="footer_left">
+          <div class="footer_logo">
+            <a href="#">
+              <img src="momotravel_logo2.png" alt="MOMO TRAVEL" class="logo">
+            </a>
+          </div>
+          <ul class="footer_sns">
+            <li>
+              <a href="#" target="_blank">
+                <img src="facebook.png" alt="facebook" class="sns_btn">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="line.png" alt="line" class="sns_btn">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="twitter.png" alt="twitter" class="sns_btn">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="instagram.png" alt="instagram" class="sns_btn">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer_center">
+          <div class="footer_nav_national footer_upper_nav">
+            <h3 class="footer_ttl">国内</h3>
+            <ul>
+              <li class="footer_upper_nav_item"><a href="#">国内ホテル</a></li>
+              <li class="footer_upper_nav_item"><a href="#">国内航空券</a></li>
+              <li class="footer_upper_nav_item"><a href="#" >国内ツアー</a></li>
+              <li class="footer_upper_nav_item"><a href="#">レジャー・体験</a></li>
+            </ul>
+          </div>
+          <div class="footer_nav_international footer_upper_nav">
+            <h3 class="footer_ttl">海外</h3>
+            <ul>
+              <li class="footer_upper_nav_item"><a href="#">海外ホテル</a></li>
+              <li class="footer_upper_nav_item"><a href="#">海外航空券</a></li>
+              <li class="footer_upper_nav_item"><a href="#">海外ツアー</a></li>
+              <li class="footer_upper_nav_item"><a href="#">オプション</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer_right">
+          <div class="tel">
+            <p class="tel_number">TEL：00-0000-0000</p>
+            <p class="tel_time">（受付時間　9:00〜20:00）</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer_lower">
+        <ul class="footer_lower_nav_list">
+          <li class="footer_lower_nav_item"><a href="#">会社情報</a></li>
+          <li class="footer_lower_nav_item"><a href="#">お問い合わせ</a></li>
+          <li class="footer_lower_nav_item"><a href="#">サイト規約</a></li>
+          <li class="footer_lower_nav_item"><a href="#">個人情報保護について</a></li>
+        </ul>
+        <p class="copyright">
+          <small>Copyright &copy; 2021 MOMO TRAVEL All rights reserved.</small>
+        </p>
+      </div>
+    </footer>
+    <!--javascript-->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
